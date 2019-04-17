@@ -16,6 +16,7 @@
     "lint:fix": "prettier --parser typescript --write '{src,test,examples}/**/*.ts' && prettier --write '{src,test,examples}/**/*.js'",
     "lint:prettier:ts": "prettier --parser typescript --check '{src,test,examples}/**/*.ts'",
     "lint:prettier:js": "prettier --parser typescript --check '{src,test,examples}/**/*.js'",
+    "pactTest": "export NODE_ENV=pactTest && jest --testRegex \"/*(.test.pact.js)\" --runInBand --setupFiles ./pactSetup.js --setupTestFrameworkScriptFile ./pactTestWrapper.js",
     "postdist": "npm t",
     "posttest": "npm run test:karma",
     "predist": "npm run clean && npm run lint && npm run jscpd",
